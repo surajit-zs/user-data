@@ -25,7 +25,7 @@ func (Store) Create(ctx *gofr.Context, user *models.User) (*models.User, error) 
 	_, err := ctx.SQL.ExecContext(ctx, createUserQuery, user.ID, user.Name, user.UserName,
 		user.Password, user.CreatedAt)
 	if err != nil {
-		return nil, err
+		return nil, errors.DB{Err: err}
 	}
 
 	return user, nil
@@ -96,7 +96,7 @@ func (s Store) Update(ctx *gofr.Context, user *models.User) (*models.User, error
 		return nil, errors.DB{Err: err}
 	}
 
-	return s.Get(ctx, user.ID)
+	return user, err
 }
 
 func (Store) Delete(ctx *gofr.Context, userID uuid.UUID) error {
