@@ -4,7 +4,17 @@ go 1.22
 
 toolchain go1.22.5
 
-require github.com/google/uuid v1.6.0
+require (
+	github.com/golang/mock v1.1.1
+	github.com/google/uuid v1.6.0
+	github.com/stretchr/testify v1.9.0
+)
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
 
 require (
 	cloud.google.com/go v0.115.0 // indirect
@@ -14,7 +24,7 @@ require (
 	cloud.google.com/go/iam v1.1.10 // indirect
 	cloud.google.com/go/pubsub v1.40.0 // indirect
 	filippo.io/edwards25519 v1.1.0 // indirect
-	github.com/DATA-DOG/go-sqlmock v1.5.2 // indirect
+	github.com/DATA-DOG/go-sqlmock v1.5.2
 	github.com/XSAM/otelsql v0.32.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
@@ -46,7 +56,7 @@ require (
 	github.com/ncruces/go-strftime v0.1.9 // indirect
 	github.com/openzipkin/zipkin-go v0.4.3 // indirect
 	github.com/pierrec/lz4/v4 v4.1.21 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
+	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.19.1 // indirect
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.55.0 // indirect
